@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+            <h1>Task<span>Flow.</span></h1>
+            <p class="subtitle">Make today count, one task at a time.</p>
+        </header>
+
+        <section class="task-panel">
+            <form id="task-form">
+                <label for="task-input">What needs to get done?</label>
+                <div class="input-row">
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="Enter a new task..."
+                        maxlength="200"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" class="add-btn">+ Add</button>
+                </div>
+            </form>
+
+            <div class="stats">
+                <div>
+                    <span id="total-count">0</span>
+                    <small>Total</small>
+                </div>
+                <div>
+                    <span id="active-count">0</span>
+                    <small>Remaining</small>
+                </div>
+                <div>
+                    <span id="completed-count">0</span>
+                    <small>Completed</small>
+                </div>
+            </div>
+
+            <div class="list-heading">
+                <h2>My Tasks</h2>
+                <button id="clear-completed" class="clear-btn" type="button">
+                    Clear completed
+                </button>
+            </div>
+
+            <ul id="task-list" aria-label="Your tasks"></ul>
+
+            <p id="empty-message">You're all caught up! Add your first task.</p>
+
+            <footer>
+                <span id="progress-text">0% completed</span>
+                <div class="progress-track">
+                    <div id="progress-bar"></div>
+                </div>
+                <p>Your tasks stay saved in this browser.</p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
